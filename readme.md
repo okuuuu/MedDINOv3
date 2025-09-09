@@ -176,11 +176,10 @@ nnUNetv2_plan_and_preprocess -d dataset_id -c 2d_896
 If you find this work useful, please cite:
 ``` 
 @article{li2025meddinov3,
-  title={MedDINOv3: How to Adapt Vision Foundation Models for Medical Image Segmentation?},
+  title={MedDINOv3: How to adapt vision foundation models for medical image segmentation?},
   author={Li, Yuheng and Wu, Yizhou and Lai, Yuxiang and Hu, Mingzhe and Yang, Xiaofeng},
   journal={arXiv preprint arXiv:2509.02379},
-  year={2025},
-  url={https://arxiv.org/abs/2509.02379}
+  year={2025}
 }
 ```
 ## 🙏 Acknowledgements
