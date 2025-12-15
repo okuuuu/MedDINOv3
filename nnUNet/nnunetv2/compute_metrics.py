@@ -286,14 +286,14 @@ def compute_segmentation_metrics(
     return df_metrics, summary
 
 if __name__ == "__main__":
-    dataset = "Dataset023_BTCV"
-    trainer = "dinoUNetTrainer__nnUNetPlans__2d"
-    preds_dir = f"/scr/yl_li/segmentation_data/nnUNet_results/{dataset}/{trainer}/fold_0/validation"
+    dataset = "Dataset220_KiTS2023"
+    trainer = "meddinov3_base_primus_multiscale_Trainer__nnUNetPlans__2d_896"
+    preds_dir = f"/gpfs/helios/home/okuu/nnUNet_results/{dataset}/{trainer}/fold_0/validation"
     csv_filename = preds_dir + "/segmentation_metrics.csv"
 
-    labels_dir = f"/scr/yl_li/segmentation_data/nnUNet_raw_data_base/nnUNet_raw_data/{dataset}/labelsTr"
+    labels_dir = f"/gpfs/helios/home/okuu/nnUNet_raw/{dataset}/labelsTr"
     # Load dataset.json which contains the labels mapping (including background)
-    dataset_json_path = f"/scr/yl_li/segmentation_data/nnUNet_raw_data_base/nnUNet_raw_data/{dataset}/dataset.json"  # Change this path if needed
+    dataset_json_path = f"/gpfs/helios/home/okuu/nnUNet_raw/{dataset}/dataset.json"  # Change this path if needed
     with open(dataset_json_path, "r") as f:
         dataset_info = json.load(f)
     class_list = list(dataset_info['labels'].keys())[1:]
