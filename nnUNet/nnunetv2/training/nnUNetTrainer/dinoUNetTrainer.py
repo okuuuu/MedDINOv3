@@ -180,7 +180,7 @@ class dinoUNetTrainer(nnUNetTrainer):
             network_config=arch_init_kwargs,
             input_channels=num_input_channels,
             num_classes=num_output_channels,
-            dinov3_pretrained_path='/scr2/yl_li/dinov3/dinov3_vitb16_pretrain_lvd1689m-73cec8be.pth', 
+            dinov3_pretrained_path='/gpfs/helios/home/okuu/dinov3_vitb16_pretrain_lvd1689m-73cec8be.pth',  
             dinov3_model_name='dinounet_b',  # map to dinov3 backbone
         )
         # Initialize weights for decoder
