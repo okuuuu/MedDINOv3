@@ -1544,7 +1544,7 @@ class dinov3_base_primus_multiscale_Trainer(dinov3_base_primus_Trainer):
         model = vit_base(drop_path_rate=0.2, layerscale_init=1.0e-05)
         # Load checkpoint
         chkpt = torch.load(
-            '/scr2/yl_li/dinov3/dinov3_vitb16_pretrain_lvd1689m-73cec8be.pth',
+            '/gpfs/helios/home/okuu/dinov3_vitb16_pretrain_lvd1689m-73cec8be.pth',
             map_location='cpu'
         )
         # Load with strict=False so it won’t crash on mismatches
@@ -1588,7 +1588,7 @@ class meddinov3_base_primus_multiscale_Trainer(dinov3_base_primus_Trainer):
                          qkv_bias = False, mask_k_bias= True)
         # Load checkpoint (remember to download our checkpoint)
         chkpt = torch.load(
-            '/scr2/yl_li/dinov3/public_release/ct_model_vitb_batch_512_adapt_high_res/model.pth',
+            '/gpfs/helios/home/okuu/model.pth',
             map_location='cpu'
         )
         state_dict = chkpt['teacher']
